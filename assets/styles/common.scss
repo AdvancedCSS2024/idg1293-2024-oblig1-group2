@@ -2,80 +2,165 @@
 // IMPLEMENT ALL THE RULES RELATED TO THE COMPONENTS THAT ARE PART OF YOUR DESIGN SYSTEM HERE 
 // Example: input, button, card ...
 
-/*search bar*/
-form {
-    margin: 20px;
-    text-align: center;
-    flex-grow: 1;
+
+/*nav bar*/
+.nav__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    list-style-type: none;
+    
+    .nav__item{
+        display: flex;
+        font-size: 12px;
+        color: #464646;
+        padding: 14px 0px 14px 0px;
+    & > span {
+        margin-left: 0.5em;
+        margin-top: 5px;
+    }
+    &:hover{
+        border-bottom: #06befb solid 2px;
+    }
+    }
+    .nav__logo{
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        margin-right: 17em;
+        margin-left: 0.5em;
+        color: #464646;
+    &:hover{
+        border-bottom: #06befb solid 2px;
+    }
+    .nav__img{
+        width: 100px;
+        height: auto;
+        margin-left: -3em;
+        margin-right: 0.5em;
+    }
+    }
 }
-input[type="search"] {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
+
+.nav__line {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
 }
-/*search bar end*/
+/*nav bar end*/
+
+/*searchbar*/
+.searchbar {
+    display: flex;
+    align-items: center;
+    .searchbar__search {
+        margin: 20px;
+        text-align: center;
+        flex-grow: 1;
+        input[type="search"] {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+    }
+    .searchbar__kart{
+        margin-left: 8px;
+        color: #464646;
+        &:hover {
+            text-decoration: underline;
+        } 
+    }
+}
+/*searchbar end*/
+
+/*elements*/
+.category {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 50px;
+    margin-left: 40px;
+
+    .category__element {
+        color: #06befb;
+    &:hover {
+        color: #767676; 
+    }
+    }
+}
+/*elements end*/
+
+/*recomended*/
+.recomended {
+    margin-right: 0.2em;
+    .recomended__header{
+        display: inline-block;
+        margin-top: 2em;
+        font-size: 22px;
+        color: #464646; 
+    }
+    .recomended__link {
+        color: #06befb;
+    &:hover{
+        text-decoration: underline;
+    }
+    }
+}
+/*recomended end*/
 
 /*cards*/
-.card__container {
+.card {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 0fr);
     grid-gap: 5px;
     justify-items: center;
 }
-.card {
+.card__container {
     position: relative;
     width: 300px;
     padding: 10px;
-    margin: 0;
+    &:hover {
+        background-color: #F1F9FF;
+        border-radius: 5px; 
+    }
 }
-.card h2 {
-    font-size: 15px;
-    color: #464646;
-}
-.card p {
+.card__location {
     font-size: 12px;
     color: #767676;
 }
-.card img {
+.card__description {
+    font-size: 15px;
+    color: #464646;
+}
+.card__img {
     width: 100%;
     border-radius: 5px;
     border: 2px solid #ccc;
 }
-.card:hover {
-    background-color: #F1F9FF;
-    border-radius: 5px;
-}
-.card a {
-    text-decoration: none;
-}
 /*cards end*/
 
-/*button*/
-.icon button{
+/*heart button*/
+.card__icon {
     border: hidden;
     border-radius: 50%;
-    background: transparent;
-}
-.icon button:hover{
-    background-color: #B6F0FF;
-    border-radius: 50%;
-}
-.icon {
     position: absolute;
-    top: 5px;
-    right: 0; 
+    top: 20px;
+    right: 15px;
     z-index: 1; 
-    padding: 5%;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    &:hover {
+        background-color: #B6F0FF;
+    }
 }
-/*button end*/
+/*heart button end*/
 
 /*price*/
-.text__price p {
+.card__price {
     font-size: 15px;
     color: white;
-}
-.text__price {
     position: absolute;
     top: 0; 
     left: 5px; 
@@ -86,21 +171,33 @@ input[type="search"] {
 
 
 @media screen and (max-width: 900px) {
-    .category__elements{
+    .category{
         overflow: scroll;
     }
 }
 
 @media screen and (max-width: 1010px) {
-    .card__container {
+    .nav__logo > span {
+    display: none;
+    }
+    .nav__item > span {
+    display: none;
+    }
+    .card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
     justify-items: center;
     }
-    .card {
+    .card__container {
     width: 100%;
     padding: 10px;
     margin: 0;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    body {
+        margin-left:2%;
     }
 }
