@@ -1,4 +1,5 @@
 // USE THIS FILE TO CREATE THE LAYOUT AND SPECIFIC RULES FOR SCREENSHOTS 1 and 2
+
 @use "colors.scss";
 @use "common.scss";
 
@@ -10,3 +11,13 @@ body {
     line-height: 1.3;
     letter-spacing: .25px;
 }
+=======
+@use "common.scss";
+
+p{
+    color: #464646;
+}
+a {
+    text-decoration: none;
+}
+
