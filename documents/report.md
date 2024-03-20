@@ -1,0 +1,7 @@
+My partner and I started by identified the main components on both page 1 and page 2, establishing the foundational structure of the HTML. Next, we applied BEM naming conventions, following the block, element, modifier methodology, taking inspiration from examples in the CSS portion of the Fabric Design System and Finn.no. 
+
+For page 1 and 2, we integrated colors and icons from the design system, while other elements such as font size, SVGs, additional colors, and logos were sourced by inspecting the original Finn.no page.We payed most attention to the cards, buttons and inputs, and feel like we got them right according to the design system.
+
+During the development of page 2, challenges arose, particularly in creating a precise border-shadow effect around icons and implementing functionality for an eye icon to toggle state when clicked, which remains unresolved. Additionally, I utilized colors.scss to maintain a more organized code structure.
+
+We have not used git as much as the assignment asked, because we started before the repositories were created, so a lot of the code was committed at once. We still feel like we learned the most important from github, because it is more advanced in the end than in the beginning anyways (e.g. merging, conflicts..).
