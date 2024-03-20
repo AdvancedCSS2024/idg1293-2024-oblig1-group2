@@ -125,6 +125,7 @@
             color: colors.$lighterBlue;
             line-height: 1.5;
             margin: 5px 0 20px 4px;
+            text-decoration: underline;
         }
     }
     &__checkbox{
@@ -227,7 +228,7 @@ input[type=checkbox]{
     background-color: white !important;
   }
   
-=======
+
 // IMPLEMENT ALL THE RULES RELATED TO THE COMPONENTS THAT ARE PART OF YOUR DESIGN SYSTEM HERE
 // Example: input, button, card ...
 
