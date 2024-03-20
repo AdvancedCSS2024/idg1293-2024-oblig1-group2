@@ -1,9 +1,5 @@
 // USE THIS FILE TO CREATE THE LAYOUT AND SPECIFIC RULES FOR SCREENSHOTS 1 and 2
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 15%;
-    margin-right: 15%;
-}
+@use "common.scss";
 
 p{
     color: #464646;
