@@ -1,4 +1,233 @@
 // YOU MUST USE BEM HERE
+// IMPLEMENT ALL THE RULES RELATED TO THE COMPONENTS THAT ARE PART OF YOUR DESIGN SYSTEM HERE 
+// Example: input, button, card ...
+@use "colors.scss";
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    margin: 0 50px;
+
+    &__section--right{
+        margin-right: auto;
+    }
+    &__section--left{
+        margin-left: auto;
+    }
+    &__background{
+        background-color: colors.$Ice;
+        padding: 40px; 
+        p {
+            text-align: center;
+            color: colors.$licorice;
+        }
+    }
+    &__container-img{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.button {
+    &--link{
+        color: colors.$babyBlue;
+        text-decoration: none;
+    }
+    &--link:hover{
+       text-decoration: underline;
+    }
+}
+
+.footer{
+    &__content{
+        position: relative;
+    }
+    &__link-list{
+        display: flex;
+        list-style: none;
+        padding: 5px;
+        position: absolute;
+        left: 63.5%;
+        max-width: 100%; 
+    }
+    &__link{
+        margin-right: 16px;
+        font-size: 13px;
+        color: colors.$licorice;
+        text-decoration: none;
+    }
+    &__link:hover{
+        text-decoration: underline;
+    }
+}
+
+.form{
+    background-color: colors.$milk;
+    border-radius: 7px;
+    box-shadow: 2px 2px 6px 6px colors.$lightGray; 
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+    padding:0 2rem 2.5rem;
+ 
+    &__logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 85px;
+    }
+    &__logo-img{
+        max-width: 40px;
+        position: relative;
+        margin-top: 13px;
+    }
+    &__company-logo{
+        max-width: 120px;
+    }
+    &__input-container2,
+    &__input-container1{
+    position: relative;
+    p{
+        color: colors.$FadeBlack;
+        margin-top: 5px;
+        line-height: 1.66;
+        font-size: 11.9px;
+    }
+    }
+    &__input{
+        background-color: colors.$lightPearl;
+        border-radius: 5px 5px 0px 0px;
+        border: none;
+        box-shadow: 0px 1px colors.$black;
+        width: 100%;
+        height: 3.59em;
+        transition: all 0.3s ease;
+        outline: none;
+    }
+    &__input:focus{
+        box-shadow: 0px 2px colors.$lighterBlue;
+    }
+    &__input:hover{
+       background-color: colors.$skin;
+    }
+    &__input:focus::placeholder,
+    &__input:not(:placeholder-shown)::placeholder{
+            color: colors.$primaryBlue;
+            transform: translateY(-50%); 
+            font-size: 11px;
+    }
+    &__link{
+        text-decoration-color: colors.$primaryBlue;
+        p{
+            color: colors.$lighterBlue;
+            line-height: 1.5;
+            margin: 5px 0 20px 4px;
+        }
+    }
+    &__checkbox{
+        display: flex;
+        align-items: center;
+        margin: 0px 16px 0 0;
+    
+        p{
+            margin: 10px; 
+        }
+    }
+    &__checkbox-container{
+       display: flex;
+       align-items: center; 
+    }
+    &__checkbox-input{
+        width: 20px;
+        height: 20px;
+    }
+    &__button{
+        margin-left: 145px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    &__eye-button{
+        position: absolute;
+        right: 18px;
+        bottom: 45.5px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    &__button-group{
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        margin: 8px 0px 0px;
+    }
+    &__info{
+        position: relative;
+    }
+    &__login-button--primary{
+        background-color: colors.$lighterBlue;
+        border-radius: 5px;
+        border: none;
+        padding: 16px;
+        width: 100%;
+        margin: 10px;
+
+        span{
+            color: colors.$milk;
+            font-size: 17px;
+        }
+    }
+
+    &__login-button--primary:hover{
+        background-color: colors.$smalt;
+    }
+    &__login-button--flat{
+        color: colors.$primaryBlue;
+        background-color: colors.$milk;
+        border: none;
+        padding: 16px;
+        width: 100%;
+        margin: 2px;
+
+        span{
+            font-size: 17px;
+            color: colors.$lighterBlue;
+        }
+    }
+    &__login-button--flat:hover{
+        background-color: colors.$marble;
+        border: solid black 0.5px;
+        border-radius: 3px;
+        box-shadow: 1px 1px colors.$BoxShadowGrey;
+    }
+
+    &__title{
+        font-size: 24px;
+    }
+    &__button-info-icon:hover{
+        filter: drop-shadow(5px 5px 15px colors.$darkest);
+    }
+}
+.eye-icon:hover{
+    filter: drop-shadow(5px 5px 15px colors.$darkest);
+}
+::placeholder{
+    color: colors.$coco; 
+    padding: 1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+input[type=checkbox]{
+    accent-color: colors.$lighterBlue !important;
+    background-color: white !important;
+  }
+  
+=======
 // IMPLEMENT ALL THE RULES RELATED TO THE COMPONENTS THAT ARE PART OF YOUR DESIGN SYSTEM HERE
 // Example: input, button, card ...
 
@@ -194,3 +423,4 @@
     margin-left: 2%;
   }
 }
+
